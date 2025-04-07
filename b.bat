@@ -1,1 +1,1 @@
-cmake --build build --config RelWithDebInfo
+axmol build -xc "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
