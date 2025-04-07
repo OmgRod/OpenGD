@@ -27,11 +27,11 @@ jobs:
       shell: pwsh
       run: |
         git clone --depth=1 https://github.com/axmolengine/axmol $HOME/axmol
-        . $HOME/axmol/build.ps1 -d "$HOME/axmol" -xb '--config','Release','--target','sources-migrate'
+        . $HOME/axmol/build.ps1 -d "$HOME/axmol" -xb '--config','RelWithDebInfo','--target','sources-migrate'
     - name: Migrate sources
       run: |
         git checkout main
-        . $HOME/axmol/build_x64/bin/Release/sources-migrate.exe "$(pwd)" --fuzzy
+        . $HOME/axmol/build_x64/bin/RelWithDebInfo/sources-migrate.exe "$(pwd)" --fuzzy
         cp $HOME/axmol/build.ps1 ./build.ps1
         git add ./build.ps1 -f
       # Build your program with the given configuration
