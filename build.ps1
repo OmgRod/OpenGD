@@ -1,1 +1,1 @@
-axmol build -f
+axmol build -xc "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
